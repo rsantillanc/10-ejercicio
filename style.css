@@ -1,0 +1,71 @@
+:root {
+  --main-color: brown;
+  --main-padding: 1.5rem;
+  --main-gap: 1rem;
+  --main-radius: 0.25rem;
+}
+
+* {
+  color: var(--main-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+div {
+  border-radius: var(--main-radius);
+}
+
+.contenedor {
+  display: flex;
+  background-color: antiquewhite;
+  border-radius: 0.25rem;
+  padding: var(--main-padding);
+  gap: var(--main-gap);
+}
+
+.seccion1 {
+  background-color: var(--main-color);
+  padding: var(--main-padding);
+  flex-grow: 1;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+}
+
+.item {
+  text-align: center;
+  background-color: white;
+  padding: var(--main-padding);
+}
+
+.seccion2 {
+  display: flex;
+  background-color: var(--main-color);
+  padding: var(--main-padding);
+  flex-grow: 1;
+}
+
+.principal {
+    flex-grow: 1;
+  font-weight: 700;
+  background-color: aquamarine;
+}
+
+@media (max-width: 640px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .item {
+    flex-grow: 1;
+  }
+}
